@@ -1,10 +1,12 @@
 package com.example.litepaltest.bean;
 
+import org.litepal.crud.DataSupport;
+
 /**
  * Created by zhang on 2016/12/20.
  */
 
-public class Book {
+public class Book extends DataSupport {
     private int id;
     /**
      * 作者

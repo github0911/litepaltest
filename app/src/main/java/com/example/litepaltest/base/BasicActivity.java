@@ -14,6 +14,5 @@ public abstract class BasicActivity extends AppCompatActivity {
         ButterKnife.bind(this);
     }
 
-
     public abstract void setContentLayout();
 }
