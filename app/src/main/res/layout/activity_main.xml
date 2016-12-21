@@ -11,33 +11,95 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.litepaltest.MainActivity">
 
-    <Button
-        android:id="@+id/create_database"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="create database" />
+        android:layout_height="match_parent"
+        android:scrollbars="none">
 
-    <EditText
-        android:hint="author"
-        android:id="@+id/author"
-        android:layout_width="match_parent"
-        android:layout_height="40dp" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
-    <EditText
-        android:hint="bookName"
-        android:id="@+id/name"
-        android:layout_width="match_parent"
-        android:layout_height="40dp" />
+            <Button
+                android:id="@+id/create_database"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="create database" />
 
-    <EditText
-        android:hint="price"
-        android:id="@+id/price"
-        android:layout_width="match_parent"
-        android:layout_height="40dp" />
+            <EditText
+                android:id="@+id/author"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:hint="author" />
 
-    <Button
-        android:id="@+id/save"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="save"/>
+            <EditText
+                android:id="@+id/name"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:hint="bookName" />
+
+            <EditText
+                android:id="@+id/price"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:hint="price" />
+
+            <Button
+                android:id="@+id/save"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="save" />
+
+            <Button
+                android:id="@+id/update"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="update" />
+
+            <Button
+                android:id="@+id/query"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="query" />
+
+            <Button
+                android:id="@+id/queryAll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="queryAll" />
+
+            <EditText
+                android:id="@+id/delete_id"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:hint="deleteId" />
+
+            <Button
+                android:id="@+id/delete"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="delete" />
+
+            <Button
+                android:id="@+id/delete_all"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="deleteAll" />
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:scrollbars="none">
+
+                <TextView
+                    android:id="@+id/result"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </ScrollView>
+
+        </LinearLayout>
+
+    </ScrollView>
 </LinearLayout>
