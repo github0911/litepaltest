@@ -3,7 +3,6 @@ package com.example.litepaltest;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Log;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -30,26 +29,11 @@ public class MainActivity extends BasicActivity {
     EditText name;
     @BindView(R.id.price)
     EditText price;
-    @BindView(R.id.save)
-    Button save;
-    @BindView(R.id.update)
-    Button update;
-    @BindView(R.id.create_database)
-    Button createData;
     @BindView(R.id.result)
     TextView result;
-    @BindView(R.id.query)
-    Button query;
-    @BindView(R.id.queryAll)
-    Button queryAll;
-
     Gson gson;
     @BindView(R.id.delete_id)
     EditText deleteId;
-    @BindView(R.id.delete)
-    Button delete;
-    @BindView(R.id.delete_all)
-    Button deleteAll;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -77,10 +61,8 @@ public class MainActivity extends BasicActivity {
         book.setPrice(TextUtils.isEmpty(price.getText().toString()) ? 0 : Double.valueOf(price.getText().toString()));
         if (book.save()) {
             Toast.makeText(this, "save success", Toast.LENGTH_SHORT).show();
-            Log.i(TAG, "save: success");
         } else {
             Toast.makeText(this, "save failed", Toast.LENGTH_SHORT).show();
-            Log.i(TAG, "save: success");
         }
     }
 
@@ -114,9 +96,9 @@ public class MainActivity extends BasicActivity {
     public void deleteAll(){
         int count = DataSupport.deleteAll(Book.class);
         if (count > 0) {
-            Toast.makeText(this, "delete success", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "delete all success", Toast.LENGTH_SHORT).show();
         } else {
-            Toast.makeText(this, "delete failed", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "delete all failed", Toast.LENGTH_SHORT).show();
         }
     }
 
